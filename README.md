@@ -13,7 +13,7 @@ A 2D platforming game written in C++ using SFML
       - extract zip file
       - move extracted folder somewhere appropriate (I moved it to 'C:\Program Files (x86)\' and renamed it to just 'SFML')
     
-  * Set project's paths to SFML
+  * Tell project where SFML is:
     - Clone this repo to wherever you store you projects and open the solution in Visual Studio
     - Then, once the project is opened, in the top menu bar navigate to these settings and set this boxes to:
       - Project > Properties > C/C++ > General > Additional Include Libraries: <path-to-your-sfml-folder>\include
