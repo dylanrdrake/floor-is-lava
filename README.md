@@ -9,13 +9,13 @@ A 2D platforming game written in C++ using SFML
 ### Windows
   * Clone this repo to wherever you store you projects
   * This repo does not have the necessary environment setup for SFML
-  * download SFML:
+  * **download SFML**:
     - SFML downloaded and extracted somewhere on your dev machine
       - download [here](https://www.sfml-dev.org/download/sfml/2.4.2/). select 'Visual C++ 14 (2015) - 32-bit' option
       - extract zip file
       - move extracted folder somewhere appropriate (I moved it to 'C:\Program Files (x86)\' and renamed it to just 'SFML')
-<br>
-  * Tell project where SFML is:
+
+  * **Tell project where SFML is**:
     - Open the project in Visual Studio
     - In the top menu bar navigate to these settings and set this boxes to:
       - Project > Properties > C/C++ > General > Additional Include Libraries: <path-to-your-sfml-folder>\include
@@ -23,8 +23,8 @@ A 2D platforming game written in C++ using SFML
       - Project > Properties > Linker > Input   Add this text to the very beginning of the text box without overwriting what is already in there:
           
             sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;sfml-network-d.lib;sfml-audio-d.lib;
-<br>
-  * Copy SFML dll's to projects source code
+
+  * **Copy SFML dll's to projects source code**
     - go to where you saved the SFML folder and open it then open the 'bin' folder
     - copy all files in this folder and paste them in the same place as the game's source code files
 
