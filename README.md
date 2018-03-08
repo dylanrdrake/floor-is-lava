@@ -9,7 +9,7 @@ A 2D platforming game written in C++ using SFML
   * This repo does not have the necessary environment setup for SFML
   * You will need:
     - SFML downloaded and extracted somewhere on your dev machine
-      - download (here)[https://www.sfml-dev.org/download/sfml/2.4.2/]. select 'Visual C++ 14 (2015) - 32-bit' option
+      - download [here](https://www.sfml-dev.org/download/sfml/2.4.2/). select 'Visual C++ 14 (2015) - 32-bit' option
       - extract zip file
       - move extracted folder somewhere appropriate (I moved it to 'C:\Program Files (x86)\' and renamed it to just 'SFML')
     - Clone this repo to wherever you store you projects and open the solution in Visual Studio
