@@ -7,19 +7,22 @@ A 2D platforming game written in C++ using SFML
   
 ### Windows
   * This repo does not have the necessary environment setup for SFML
-  * You will need:
+  * download SFML:
     - SFML downloaded and extracted somewhere on your dev machine
       - download [here](https://www.sfml-dev.org/download/sfml/2.4.2/). select 'Visual C++ 14 (2015) - 32-bit' option
       - extract zip file
       - move extracted folder somewhere appropriate (I moved it to 'C:\Program Files (x86)\' and renamed it to just 'SFML')
+    
+  * Set project's paths to SFML
     - Clone this repo to wherever you store you projects and open the solution in Visual Studio
-    - Then, once the project is opened:
+    - Then, once the project is opened, in the top menu bar navigate to these settings and set this boxes to:
       - Project > Properties > C/C++ > General > Additional Include Libraries: <path-to-your-sfml-folder>\include
       - Project > Properties > Linker > General > Additional Library Directories: <path-to-your-sfml-folder>\lib
       - Project > Properties > Linker > Input   Add this text to the very beginning of the text box without overwriting what is already in there:
           
             sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;sfml-network-d.lib;sfml-audio-d.lib;
     
+  * Copy SFML dll's to projects source code
     - go to where you saved the SFML folder and open it then open the 'bin' folder
     - copy all files in this folder and paste them in the same place as the game's source code files
 
