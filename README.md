@@ -14,6 +14,7 @@ A 2D platforming game written in C++ using SFML
       - download [here](https://www.sfml-dev.org/download/sfml/2.4.2/). select 'Visual C++ 14 (2015) - 32-bit' option
       - extract zip file
       - move extracted folder somewhere appropriate (I moved it to 'C:\Program Files (x86)\' and renamed it to just 'SFML')
+        * (you can also move it to the project's folder if you want to keep it with the project)
 
   * **Tell project where SFML is**:
     - Open the project in Visual Studio
