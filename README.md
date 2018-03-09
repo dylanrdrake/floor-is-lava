@@ -19,8 +19,14 @@ A 2D platforming game written in C++ using SFML
   * **Tell project where SFML is**:
     - Open the project in Visual Studio
     - In the top menu bar navigate to these settings and set this boxes to:
-      - Project > Properties > C/C++ > General > Additional Include Libraries: <path-to-your-sfml-folder>\include
-      - Project > Properties > Linker > General > Additional Library Directories: <path-to-your-sfml-folder>\lib
+      - Project > Properties > C/C++ > General > Additional Include Libraries:
+            
+            <path-to-your-sfml-folder>\include
+
+      - Project > Properties > Linker > General > Additional Library Directories:
+      
+            <path-to-your-sfml-folder>\lib
+      
       - Project > Properties > Linker > Input   Add this text to the very beginning of the text box without overwriting what is already in there:
           
             sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;sfml-network-d.lib;sfml-audio-d.lib;
