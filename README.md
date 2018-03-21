@@ -34,6 +34,10 @@ A 2D platforming game written in C++ using SFML
   * **Copy SFML dll's to projects source code**
     - go to where you saved the SFML folder and open it then open the 'bin' folder
     - copy all files in this folder and paste them in the same place as the game's source code files
+    - I noticed while Andrea and I were getting hers running that you need to add these .dll's through Visual Studio. If you just copy them into the project's directory Visual Studio will ignore them.
+      * Right click on the 'Source files' folder in the file explorer.
+      * click Add > Add existing item
+      * navigate to where you saved SFML and select all .dll files in the bin folder and click ok
 
 * Then in Visual Studio the game should build and run
 <br><br>
