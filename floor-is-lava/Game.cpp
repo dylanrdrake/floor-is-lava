@@ -4,7 +4,7 @@ using namespace sf;
 
 // constructor
 Game::Game() {
-	// get screen resolution and store hey hey hey
+	// get screen resolution and store 
 	Vector2f resolution;
 	resolution.x = VideoMode::getDesktopMode().width;
 	resolution.y = VideoMode::getDesktopMode().height;
