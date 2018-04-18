@@ -13,7 +13,7 @@ Lava::Lava()
 
 	// set Lava's starting position
 	position.x = 200;
-	position.y = 1000;
+	position.y = 900;
 }
 
 Sprite Lava::getSprite() {
