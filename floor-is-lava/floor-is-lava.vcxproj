@@ -150,15 +150,40 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Game.h" />
+    <ClInclude Include="AssetManager.hpp" />
+    <ClInclude Include="CharacterSelectState.hpp" />
+    <ClInclude Include="CreditsState.hpp" />
+    <ClInclude Include="Definitions.hpp" />
+    <ClInclude Include="Game.hpp" />
+    <ClInclude Include="GameOverState.hpp" />
+    <ClInclude Include="GameRunState.hpp" />
+    <ClInclude Include="HUD.hpp" />
+    <ClInclude Include="InputManager.hpp" />
+    <ClInclude Include="MainMenuState.hpp" />
+    <ClInclude Include="OptionsState.hpp" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="SplashState.hpp" />
+    <ClInclude Include="State.hpp" />
+    <ClInclude Include="StateMachine.hpp" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AssetManager.cpp" />
+    <ClCompile Include="CharacterSelectState.cpp" />
+    <ClCompile Include="CreditsState.cpp" />
     <ClCompile Include="floor-is-lava.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameOverState.cpp" />
+    <ClCompile Include="GameRunState.cpp" />
+    <ClCompile Include="HUD.cpp" />
+    <ClCompile Include="InputManager.cpp" />
+    <ClCompile Include="MainMenuState.cpp" />
+    <ClCompile Include="OptionsState.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="SplashState.cpp" />
+    <ClCompile Include="State.cpp" />
+    <ClCompile Include="StateMachine.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
