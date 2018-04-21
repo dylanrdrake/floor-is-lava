@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "Definitions.hpp"
 
+#include "Player.h"
 #include "GameOverState.hpp"
 #include "GameRunState.hpp"
 #include "CharacterSelectState.hpp"
@@ -11,10 +12,9 @@
 
 
 //Default constructor
-GameRunState::GameRunState(GameDataRef data, std::string selectedLlama) 
+GameRunState::GameRunState(GameDataRef data) : _data(data)
 {
-	this->_data->assets.LoadTexture("Game Llama", selectedLlama);
-	_gameLlama.setTexture(this->_data->assets.GetTexture("Game Llama"));
+
 }
 
 void GameRunState::SetGameSprite(int spriteNumber)
@@ -27,21 +27,23 @@ void GameRunState::Init()
 {
     //Loading sprites for the Credits state
     this->_data->assets.LoadTexture("Play Again Button", PLAY_AGAIN_BUTTON);
-    this->_data->assets.LoadTexture("Game Llama", GAME_LLAMA);
     this->_data->assets.LoadFont("Font", GAME_FONT);
     
     hud = new HUD( _data );
-    
-    score = 0;
-    livesCount = 3;
-    hud->UpdateHud(score, livesCount);
+	score = 0;
+	livesCount = 3;
+	hud->UpdateHud(score, livesCount);
+	
+	_gameLlama.setTexture(this->_data->assets.GetTexture("Game Llama"));
+	player = new Player(_gameLlama);
     
     //Setting the textures to the sprites we loaded.
     _deathScreenButton.setTexture(this->_data->assets.GetTexture("Play Again Button"));
-    _gameLlama.setTexture(this->_data->assets.GetTexture("Game Llama"));
     
-    //Setting the position of the credits logo
-    _gameLlama.setPosition((SCREEN_WIDTH / 2) + (_gameLlama.getGlobalBounds().width / 2), _gameLlama.getGlobalBounds().height / 2 + 50);
+
+    
+    //Setting the initial position of the player
+    //_gameLlama.setPosition(player->getPosition());
     
     //Death Screen Button
     
@@ -57,6 +59,8 @@ void GameRunState::HandleInput()
     //Handles the exit button at the top of the window
     while (this->_data->window.pollEvent(event))
     {
+		this->player->input();
+
         if (sf::Event::Closed == event.type)
         {
             this->_data->window.close();
@@ -78,6 +82,7 @@ void GameRunState::HandleInput()
 
 void GameRunState::Update(float dt)
 {
+	this->player->update(dt);
     
 }
 
@@ -85,9 +90,9 @@ void GameRunState::Draw(float dt)
 {
     this->_data->window.clear(sf::Color::Black);
     
-    this->_data->window.draw(this->_gameLlama);
     this->_data->window.draw(this->_deathScreenButton);
     
+	this->_data->window.draw(this->player->getSprite());
     hud->Draw();
     
     this->_data->window.display();

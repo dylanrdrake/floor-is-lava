@@ -3,13 +3,14 @@
 #include <SFML/Graphics.hpp>
 #include "State.hpp"
 #include "Game.hpp"
+#include "Player.h"
 #include "HUD.hpp"
 #include <string>
 
 class GameRunState : public State
 {
 public:
-    GameRunState(GameDataRef, std::string);
+    GameRunState(GameDataRef);
     
     void Init();
     
@@ -30,6 +31,7 @@ private:
     int score;
     
     HUD *hud;
+	Player *player;
     
     sf::Clock clock;
     

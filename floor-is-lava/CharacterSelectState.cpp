@@ -223,7 +223,8 @@ void CharacterSelectState::HandleInput()
         {
             if (this->_data->input.IsSpriteClicked(this->_blankButton, sf::Mouse::Left, this->_data->window))
             {
-                this->_data->machine.AddState(StateRef(new GameRunState(_data, selectedLlama)), true);
+				this->_data->assets.LoadTexture("Game Llama", selectedLlama);
+				this->_data->machine.AddState(StateRef(new GameRunState(_data)), true);
             }
         }
     }
