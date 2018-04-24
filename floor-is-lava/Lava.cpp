@@ -8,7 +8,7 @@ Lava::Lava()
 	riseSpeed = 100;
 
 	// associate a texture with the sprite
-	texture.loadFromFile("lava.png");
+	texture.loadFromFile(GAME_LAVA);
 	sprite.setTexture(texture);
 
 	// set Lava's starting position
