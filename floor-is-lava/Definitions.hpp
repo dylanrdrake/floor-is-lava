@@ -42,4 +42,8 @@
 #define GAME_FONT "Resources/Fonts/ARCADECLASSIC.TTF"
 #define GAME_LLAMA "Resources/Images/LlamaCarol.png"
 
+#define GAME_BLOCK "Resources/Images/block.png"
+#define GAME_LAVA "Resources/Images/lava.png"
+
+#define SCORE_FILE "Resources/Files/scoreFile.txt"
 
