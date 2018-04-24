@@ -8,7 +8,7 @@ Block::Block()
 	texture.loadFromFile("block.png");
 	sprite.setTexture(texture);
 
-	// set Player's starting position
+	// set block starting position
 	position.x = 600;
 	position.y = 800;
 }
